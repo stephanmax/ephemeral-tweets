@@ -1,0 +1,27 @@
+{
+  "name": "ephemeral-tweets",
+  "version": "1.0.0",
+  "description": "Automatically delete your old tweets",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "wt create -w --secrets-file .secrets --param maxTweetAge=7 .",
+    "deploy": "wt cron create --secrets-file .secrets --schedule '0 3 * * 1' ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephanmax/ephemeral-tweets.git"
+  },
+  "author": "Stephan Max <hi@stephanmax.is> (https://stephanmax.is/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephanmax/ephemeral-tweets/issues"
+  },
+  "homepage": "https://github.com/stephanmax/ephemeral-tweets#readme",
+  "dependencies": {
+    "twit": "^2.2.10"
+  },
+  "devDependencies": {
+    "wt-cli": "^9.5.0"
+  }
+}
