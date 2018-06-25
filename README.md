@@ -16,10 +16,10 @@ You are now all set to run
 $ npm start
 ```
 
-which installs all dependencies and exposes the script as a webtask URL that you can call. Do not forget to set the query parameter `maxTweetAge` in days. So to delete all tweets that are older than a week open
+which installs all dependencies and exposes the script as a webtask URL that you can call. Do not forget to set the parameter `maxTweetAge` inside [`package.json`](package.json) to your desired number of days.
 
 ```
-https://wt-.../ephemeral-tweets?maxTweetAge=7
+--param maxTweetAge=7
 ```
 
 ## Deploy Webtask

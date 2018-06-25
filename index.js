@@ -3,7 +3,7 @@ const Twitter = require('twit')
 const dayInMs = 24 * 60 * 60 * 1000
 
 module.exports = function (context, done) {
-  const maxTweetAge = context.query.maxTweetAge * dayInMs
+  const maxTweetAge = context.params.maxTweetAge * dayInMs
   
   const twitterClient = new Twitter({
     consumer_key: context.secrets.CONSUMER_KEY,
