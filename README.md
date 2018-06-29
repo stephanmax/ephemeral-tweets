@@ -16,10 +16,10 @@ You are now all set to run
 $ npm start
 ```
 
-which installs all dependencies and exposes the script as a webtask URL that you can call. Do not forget to set the parameter `maxTweetAge` inside [`package.json`](package.json) to your desired number of days.
+which installs all dependencies and exposes the script as a webtask URL that you can call. Do not forget to set the secret `MAX_TWEET_AGE` inside the secrets file to your desired number of days.
 
 ```
---param maxTweetAge=7
+MAX_TWEET_AGE=7
 ```
 
 ## Deploy Webtask
@@ -30,4 +30,6 @@ If you want to deploy the webtask so it triggers automatically, run
 $ npm run deploy
 ```
 
-You can set both the the `maxTweetAge` parameter and the cron schedule inside [`package.json`](package.json). Per default they are set to `7` and `'0 3 * * 1'`, so it would run every Monday, at 3:00 am and delete tweets that are older than a week.
+You can set the cron schedule inside [`package.json`](package.json). Per default it is set to `'0 3 * * 1'`, so it would run every Monday, at 3:00 am.
+
+🎉 Webtask will host and run your code for free as long as you stay below one call per second.
