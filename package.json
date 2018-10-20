@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm install",
     "start": "wt create -w --secrets-file .secrets .",
-    "deploy": "wt cron create --secrets-file .secrets --schedule '0 3 * * 1' ."
+    "deploy": "wt cron create --secrets-file .secrets --schedule '0 3 * * *' --tz Europe/Berlin ."
   },
   "repository": {
     "type": "git",

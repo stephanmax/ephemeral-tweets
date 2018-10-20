@@ -32,6 +32,6 @@ If you want to deploy the webtask so it triggers automatically, run
 $ npm run deploy
 ```
 
-You can set the cron schedule inside [`package.json`](package.json). Per default it is set to `'0 3 * * 1'`, so it would run every Monday, at 3:00 am.
+You can set the cron schedule inside [`package.json`](package.json). Per default it is set to `'0 3 * * *'` in timezone *Europe/Berlin* (see other IANA timezone names [on Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)), so it would run every day, at 3:00 am CEST.
 
 🎉 Webtask will host and run your code for free as long as you stay below one call per second.
