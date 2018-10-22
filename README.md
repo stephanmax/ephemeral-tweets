@@ -24,7 +24,21 @@ which installs all dependencies and exposes the script as a webtask URL that you
 MAX_TWEET_AGE=7
 ```
 
-## Deploy Webtask
+### Keybase.io Proof Tweet
+
+If you are using keybase.io in combination with Twitter, you are asked to post a tweet as proof that you operate the account you claim to own. To prevent the tweet from being deleted (so that people can later verify it) just add its ID to the `.secrets` file.
+
+```
+KEYBASE_TWEET_ID=906327550661623808
+```
+
+## Testing
+
+```shell
+$ npm test
+```
+
+## Deployment
 
 If you want to deploy the webtask so it triggers automatically, run
 
