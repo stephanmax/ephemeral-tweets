@@ -6,6 +6,7 @@
   "scripts": {
     "prestart": "npm install",
     "start": "wt create --watch --bundle --secrets-file .secrets .",
+    "test": "mocha",
     "deploy": "wt cron create --bundle --secrets-file .secrets --schedule '0 3 * * *' --tz Europe/Berlin ."
   },
   "repository": {
@@ -22,6 +23,8 @@
     "twit": "^2.2.10"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
     "wt-cli": "^11.0.0"
   }
 }
