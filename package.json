@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm install",
-    "start": "wt create -w --secrets-file .secrets .",
-    "deploy": "wt cron create --secrets-file .secrets --schedule '0 3 * * *' --tz Europe/Berlin ."
+    "start": "wt create --watch --bundle --secrets-file .secrets .",
+    "test": "mocha",
+    "deploy": "wt cron create --bundle --secrets-file .secrets --schedule '0 3 * * *' --tz Europe/Berlin ."
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
     "twit": "^2.2.10"
   },
   "devDependencies": {
-    "wt-cli": "^9.5.0"
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "wt-cli": "^11.0.0"
   }
 }
