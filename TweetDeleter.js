@@ -1,8 +1,9 @@
 module.exports = class TweetDeleter {
 
-  constructor(twitterClient, maxTweetAge) {
+  constructor(twitterClient, maxTweetAge, keybaseTweetId) {
     this.twitterClient = twitterClient
     this.maxTweetAge = maxTweetAge
+    this.keybaseTweetId = keybaseTweetId
   }
 
   run() {
@@ -13,6 +14,9 @@ module.exports = class TweetDeleter {
       let deleteRequests = tweets
         .filter(tweet => {
           return new Date() - new Date(tweet.created_at) > this.maxTweetAge
+        })
+        .filter(tweet => {
+          return tweet.id_str !== this.keybaseTweetId
         })
         .map(tweet => {
           return new Promise((resolve, reject) => {

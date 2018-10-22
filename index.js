@@ -6,6 +6,7 @@ const dayInMs = 24 * 60 * 60 * 1000
 
 module.exports = function(context, done) {
   const maxTweetAge = context.secrets.MAX_TWEET_AGE * dayInMs
+  const keybaseTweetId = context.secrets.KEYBASE_TWEET_ID
   
   const twitterClient = new Twitter({
     consumer_key: context.secrets.CONSUMER_KEY,
@@ -14,7 +15,7 @@ module.exports = function(context, done) {
     access_token_secret: context.secrets.ACCESS_TOKEN_SECRET
   })
 
-  const tweetDeleter = new TweetDeleter(twitterClient, maxTweetAge)
+  const tweetDeleter = new TweetDeleter(twitterClient, maxTweetAge, keybaseTweetId)
   
   tweetDeleter.run()
   .then(deletedTweets => {

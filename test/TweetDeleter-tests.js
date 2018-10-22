@@ -4,7 +4,7 @@ const TweetDeleter = require('../TweetDeleter.js')
 
 describe('TweetDeleter', () => {
 
-  it('does not delete the keybase.io proof', done => {
+  it('does not delete the keybase.io proof tweet', done => {
     const mockTwitterClient = {
       get() {
         return Promise.resolve({
