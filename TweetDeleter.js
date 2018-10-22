@@ -6,7 +6,7 @@ module.exports = class TweetDeleter {
   }
 
   run() {
-    this.twitterClient.get('statuses/user_timeline', {
+    return this.twitterClient.get('statuses/user_timeline', {
       count: 200
     })
     .then(({data: tweets}) => {

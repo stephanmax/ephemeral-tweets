@@ -2,11 +2,11 @@
   "name": "ephemeral-tweets",
   "version": "1.0.0",
   "description": "Automatically delete your old tweets",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "prestart": "npm install",
-    "start": "wt create --watch --bundle --secrets-file .secrets src/index.js",
-    "deploy": "wt cron create --bundle src/index.js --secrets-file .secrets --schedule '0 3 * * *' --tz Europe/Berlin ."
+    "start": "wt create --watch --bundle --secrets-file .secrets .",
+    "deploy": "wt cron create --bundle --secrets-file .secrets --schedule '0 3 * * *' --tz Europe/Berlin ."
   },
   "repository": {
     "type": "git",
