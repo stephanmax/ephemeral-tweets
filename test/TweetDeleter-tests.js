@@ -20,7 +20,8 @@ describe('TweetDeleter', () => {
       post(url, payload) {
         return Promise.resolve({
           data: {
-            id_str: payload.id
+            id_str: payload.id,
+            text: 'Test'
           }
         })
       }
