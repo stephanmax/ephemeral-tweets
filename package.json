@@ -4,7 +4,6 @@
   "description": "Automatically delete your old tweets",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install",
     "start": "wt create --watch --bundle --secrets-file .secrets .",
     "test": "mocha",
     "deploy": "wt cron create --bundle --secrets-file .secrets --schedule '0 3 * * *' --tz Europe/Berlin ."
