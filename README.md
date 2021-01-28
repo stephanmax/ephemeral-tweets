@@ -1,6 +1,6 @@
 # Ephemeral Tweets
 
-*You can read more about the backstory and code in my [blog post](https://stephanmax.is/writing/2018-07-05-ephemeral-tweets).*
+*You can read more about the backstory and code in my [blog post](https://stephanmax.is/writing/2018/07/ephemeral-tweets).*
 
 **Ephemeral Tweets** is a Node.js script that automatically deletes your old tweets. It runs on [webtask](https://webtask.io/) for free and is highly inspired by Vicky Lai‘s [ephemeral](https://github.com/vickylai/ephemeral).
 
